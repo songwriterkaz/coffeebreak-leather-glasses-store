@@ -1,0 +1,176 @@
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Coffeebreak Leather Glasses Store</title><link rel="icon" href="assets/logo.png"><style>
+:root{--pink:#e7548a;--pink2:#f7a8c4;--blush:#fff0f5;--cream:#fffaf3;--ink:#3b2430;--mute:#8a6a78;--card:#fff;--line:#f3cfe0}
+*{box-sizing:border-box}html,body{margin:0}body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:linear-gradient(180deg,var(--blush),var(--cream) 60%);color:var(--ink);min-height:100vh}
+a{color:var(--pink)}
+header.cb{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;padding:10px 16px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--line)}
+header.cb img{width:48px;height:48px;border-radius:12px;object-fit:cover;box-shadow:0 2px 8px #e7548a33}
+header.cb .t{flex:1;min-width:0}header.cb h1{font-family:Georgia,serif;font-size:1.15rem;margin:0;color:var(--pink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+header.cb small{color:var(--mute);font-size:.78rem}
+.btn{appearance:none;border:0;border-radius:999px;padding:10px 18px;font-weight:700;font-size:.95rem;cursor:pointer;background:var(--pink);color:#fff;box-shadow:0 3px 10px #e7548a44;transition:transform .1s}
+.btn:active{transform:scale(.96)}.btn.alt{background:#fff;color:var(--pink);border:2px solid var(--pink2);box-shadow:none}.btn.sm{padding:6px 12px;font-size:.82rem}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+nav.tabs{display:flex;gap:8px;overflow-x:auto;padding:10px 16px}nav.tabs button{white-space:nowrap}
+main{max-width:1100px;margin:0 auto;padding:12px 16px 40px}
+.hero{border-radius:22px;padding:22px;background:linear-gradient(135deg,#ffd6e6,#fff3f8);border:2px solid var(--line);margin-bottom:18px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.hero h2{font-family:Georgia,serif;margin:0 0 6px;color:var(--pink);font-size:1.6rem}.hero p{margin:0;color:var(--mute)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.card{background:var(--card);border-radius:18px;border:2px solid var(--line);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 14px #e7548a14}
+.card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:var(--blush)}
+.card .b{padding:12px 14px;display:flex;flex-direction:column;gap:6px;flex:1}.card h3{margin:0;font-size:1rem}.card p{margin:0;font-size:.85rem;color:var(--mute);flex:1}
+.price{font-weight:800;color:var(--pink)}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+select,input,textarea{font:inherit;border:2px solid var(--line);border-radius:12px;padding:8px 10px;background:#fff;color:var(--ink);width:100%}
+textarea{min-height:90px;resize:vertical}label{font-size:.82rem;color:var(--mute);display:block;margin:8px 0 3px}
+.pill{display:inline-block;padding:3px 10px;border-radius:999px;background:var(--blush);border:1px solid var(--line);font-size:.75rem;color:var(--mute)}
+.note{background:#fff;border-left:5px solid var(--pink2);border-radius:12px;padding:10px 14px;font-size:.85rem;color:var(--mute);margin:14px 0}
+footer.cb{max-width:1100px;margin:0 auto;padding:20px 16px 40px;font-size:.78rem;color:var(--mute);text-align:center;border-top:2px dashed var(--line)}
+footer.cb img{width:40px;height:40px;border-radius:10px;vertical-align:middle;margin-right:6px}
+.modal{position:fixed;inset:0;background:#3b243088;display:none;align-items:flex-end;justify-content:center;z-index:50}
+.modal.on{display:flex}.sheet{background:#fff;width:min(560px,100%);max-height:92vh;overflow:auto;border-radius:22px 22px 0 0;padding:18px 18px 26px}
+@media(min-width:700px){.modal{align-items:center}.sheet{border-radius:22px}}
+.sheet h2{margin:0 0 10px;color:var(--pink);font-family:Georgia,serif}
+.line{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px dashed var(--line);font-size:.9rem}
+.payid{background:linear-gradient(135deg,#ffe3ee,#fff);border:2px solid var(--pink2);border-radius:16px;padding:14px;margin:12px 0;font-size:.92rem}
+.payid b.id{font-size:1.1rem;color:var(--pink);word-break:break-all}
+.cartbtn{position:relative}.cartbtn .n{position:absolute;top:-6px;right:-6px;background:var(--ink);color:#fff;border-radius:999px;font-size:.7rem;padding:2px 6px}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-size:.88rem;opacity:0;transition:opacity .25s;z-index:60;pointer-events:none}.toast.on{opacity:1}
+.hidden{display:none}
+.lens-studio{margin:0 0 16px;background:#fff;border:2px solid #ffd0e6;border-radius:20px;padding:14px;box-shadow:0 4px 18px rgba(200,40,120,.13)}
+.lens-studio h2{color:#d81b78;margin:4px 0 4px;font-family:inherit}
+.lens-studio .ls-sub{color:#8a5672;font-size:13.5px;margin:0 0 10px}
+.ls-wrap{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:12px;align-items:stretch}
+@media(max-width:720px){.ls-wrap{grid-template-columns:1fr}}
+.ls-stage{background:linear-gradient(180deg,#fff0f7,#ffe3f1);border-radius:16px;overflow:hidden;border:2px solid #ffd0e6}
+.ls-stage svg{display:block;width:100%;height:auto}
+.ls-side{display:flex;flex-direction:column;gap:10px}
+.ls-xsec{background:#fff7fb;border:2px dashed #ff8cc6;border-radius:16px;overflow:hidden}
+.ls-xsec svg{display:block;width:100%;height:auto}
+.ls-row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.ls-lens{display:flex;align-items:center;gap:8px;background:#fff;border:2px solid #ff8cc6;color:#c2186b;border-radius:999px;padding:7px 13px 7px 8px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit}
+.ls-lens i{width:22px;height:22px;border-radius:50%;border:2px solid #c2186b;display:inline-block}
+.ls-lens.on{background:#ff3d96;color:#fff;border-color:#ff3d96}
+.ls-lens.on i{border-color:#fff}
+.ls-col{width:30px;height:30px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px #ff8cc6;cursor:pointer;padding:0}
+.ls-col.on{box-shadow:0 0 0 3px #d81b78}
+.ls-info{background:#fff0f7;border-left:5px solid #ff3d96;border-radius:12px;padding:10px 12px;font-size:13.5px;color:#4a1838;min-height:64px}
+.ls-status{font-weight:800;color:#d81b78;font-size:14px;min-height:20px}
+.ls-btn{background:#ff3d96;color:#fff;border:0;border-radius:999px;padding:10px 16px;font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 3px 0 #c2186b;font-family:inherit}
+.ls-btn.alt{background:#fff;color:#c2186b;border:2px solid #ff3d96;box-shadow:none}
+.ls-lbl{font-weight:700;font-size:13px;color:#8a5672;margin-top:4px}
+</style></head><body><header class="cb"><img src="assets/logo.png" alt="Coffeebreak logo"><div class="t"><h1>Coffeebreak Leather Glasses Store</h1><small>Leather cases, straps, frames and AI glasses</small></div><button class="btn cartbtn" id="cartb">Cart <span class="n" id="cn">0</span></button></header><main><section class="hero"><img src="assets/lg-case-tan.jpg" alt="" style="width:120px;height:120px;border-radius:18px;object-fit:cover"><div style="flex:1;min-width:220px"><h2>Leather for your smart glasses</h2><p>Handmade-style leather cases, straps and frames in Coffeebreak pink, tan and black.</p></div></section>
+<section class="lens-studio" id="lensStudio"></section>
+<div id="cats" class="row" style="margin-bottom:14px"></div><div class="grid" id="grid"></div><div class="note"><b>Brand note.</b> The cases, straps and frames are Coffeebreak's own, made to suit popular smart glasses. The AI Glasses are genuine, brand-new products from their makers, ordered in and resold by Coffeebreak; Coffeebreak is not an authorised retailer and has no affiliation with, and is not endorsed or sponsored by, Meta, Ray-Ban, EssilorLuxottica or Blackview. Ray-Ban, Meta, Blackview and related names are trademarks of their owners. AI Glasses pictures are Coffeebreak illustrations, not photos of the actual product.</div><div class="note">Leather goods are priced in US dollars, shipping Australia-wide US$9.95, free over US$120. AI Glasses are priced in Australian dollars with delivery within Australia included; they are made to order, so allow 1 to 3 weeks. Your lens is free with your frames. Please measure your glasses before ordering a case. Frames have a lens slot: clear, sunglass and blue-light lenses come fitted in it. Prescription lenses are made by your optometrist, not by Coffeebreak, so choose "Prescription ready" and take your frames to them.</div></main>
+<div class="modal" id="cartm"><div class="sheet"><h2>Your cart</h2><div id="cartlist"></div><div class="row" style="margin-top:14px"><button class="btn" id="tocheck">Checkout</button><button class="btn alt x">Keep shopping</button></div></div></div>
+<div class="modal" id="checkm"><div class="sheet"><h2>Checkout</h2><label>Name</label><input id="cname" autocomplete="name"><label>Email</label><input id="cemail" type="email" autocomplete="email"><label>Delivery address</label><textarea id="caddr" autocomplete="street-address"></textarea>
+<div class="payid">Pay by PayID (Teachers Mutual Bank)<br><b class="id">darkokaz@gmx.com</b><br>Total <b id="chsum"></b></div><div class="row"><button class="btn" id="pay">Place order</button><button class="btn alt x">Back</button></div></div></div>
+<div class="modal" id="doneM"><div class="sheet" id="done"></div></div><footer class="cb"><p><img src="assets/logo.png" alt="">Made in Newcastle NSW by Coffeebreak. More apps at <a href="https://coffeebreaks.itch.io" target="_blank" rel="noopener">coffeebreaks.itch.io</a></p><p>© Karen (Coffeebreak). Karen keeps all rights to her products, designs, apps, name and logo. Buyers may resell physical products they bought, but may not copy them or make their own versions. Karen claims no ownership of any third-party brands named here; all trademarks, including Ray-Ban, Meta and Blackview, belong to their owners.</p><p>AI disclosure: parts of this store, including product illustrations and text, were made with the help of AI tools.</p><p>Check out <a href="https://www.tesla.com" target="_blank" rel="noopener">Tesla</a> and <a href="https://www.starlink.com" target="_blank" rel="noopener">Starlink</a>.</p></footer><div class="toast" id="toast"></div><script>const KEY="cbleather";const P=[{"id": "hc", "name": "Hard Shell Leather Case", "cat": "Cases", "price": 59, "img": "lg-case-tan", "desc": "Full-grain leather over a hard shell, soft pink microfibre lining. Sized to fit popular smart glasses.", "opts": [{"name": "Colour", "vals": ["Tan", "Black", "Blush pink", "Cream", "Chocolate"]}, {"name": "Initials", "vals": ["None", "Embossed initials (free)"]}]}, {"id": "zf", "name": "Zip Folio Case", "cat": "Cases", "price": 69, "img": "lg-case-black", "desc": "Pebbled leather zip folio with rose gold zip and a slot for a cleaning cloth.", "opts": [{"name": "Colour", "vals": ["Tan", "Black", "Blush pink", "Cream", "Chocolate"]}]}, {"id": "cp", "name": "Charging Pouch", "cat": "Cases", "price": 45, "img": "lg-strap", "desc": "Slim leather pouch with a cable slot so your glasses can charge inside.", "opts": [{"name": "Colour", "vals": ["Tan", "Black", "Blush pink", "Cream", "Chocolate"]}]}, {"id": "fr", "name": "Leather-Wrapped Frames", "cat": "Frames", "price": 2000, "img": "lg-frame-pink", "desc": "Coffeebreak frames wrapped in soft leather. Fit for clear, sun or prescription lenses from your optometrist. Lens slot in the rim takes clear, sunglass, blue-light or prescription lenses.", "opts": [{"name": "Colour", "vals": ["Blush pink", "Tan", "Black"]}, {"name": "Size", "vals": ["Small", "Medium", "Large"]}, {"name": "Lens", "vals": ["Clear lens (Free lens included)", "Sunglass lens (Free lens included)", "Blue-light lens (Free lens included)", "Prescription ready (Free clear lens included, prescription lenses by your optometrist)"]}]}, {"id": "fw", "name": "Wayfarer-Style Leather Frames", "cat": "Frames", "price": 2000, "img": "lg-frame-pink", "desc": "A classic square shape in leather wrap with gold hinges. Lens slot in the rim takes clear, sunglass, blue-light or prescription lenses.", "opts": [{"name": "Colour", "vals": ["Black", "Chocolate", "Blush pink"]}, {"name": "Size", "vals": ["Medium", "Large"]}, {"name": "Lens", "vals": ["Clear lens (Free lens included)", "Sunglass lens (Free lens included)", "Blue-light lens (Free lens included)", "Prescription ready (Free clear lens included, prescription lenses by your optometrist)"]}]}, {"id": "bs", "name": "Braided Leather Strap", "cat": "Straps", "price": 29, "img": "lg-strap", "desc": "Braided leather glasses strap with soft silicone ends.", "opts": [{"name": "Colour", "vals": ["Tan", "Black", "Blush pink", "Cream", "Chocolate"]}]}, {"id": "cs", "name": "Chain and Leather Strap", "cat": "Straps", "price": 35, "img": "lg-strap", "desc": "Gold chain with leather sections. Wear your glasses round your neck in style.", "opts": [{"name": "Finish", "vals": ["Gold", "Rose gold", "Silver"]}]}, {"id": "gs", "name": "Gift Set: Case, Strap and Cloth", "cat": "Gift sets", "price": 89, "img": "lg-case-tan", "desc": "Hard case, braided strap and a Coffeebreak cleaning cloth in a pink gift box.", "opts": [{"name": "Colour", "vals": ["Tan", "Black", "Blush pink", "Cream", "Chocolate"]}]}, {"id": "ai1", "name": "Ray-Ban Meta Wayfarer Gen 1 AI Glasses", "cat": "AI Glasses", "price": 889, "cur": "AUD", "mto": true, "img": "ai-rayban-gen1", "desc": "Brand-new, genuine Ray-Ban Meta Wayfarer (Gen 1) smart glasses with a built-in 12MP camera, open-ear speakers, microphones and Meta AI voice assistant. Needs the Meta AI app on your phone. Manufacturer's warranty applies. Price in AUD, delivery within Australia included. Made to order: allow 1 to 3 weeks.", "opts": [{"name": "Frame and lens", "vals": ["Matte black, clear to graphite green Transitions lenses"]}]}, {"id": "ai2", "name": "Blackview BV200 AI Smart Glasses", "cat": "AI Glasses", "price": 309, "cur": "AUD", "mto": true, "img": "ai-blackview-bv200", "desc": "Brand-new Blackview BV200 smart glasses with open-ear speakers, microphones and a voice AI assistant (using ChatGPT through the companion phone app) for questions, translation, music and calls. No camera. Manufacturer's warranty applies. Price in AUD, delivery within Australia included. Made to order: allow 1 to 3 weeks.", "opts": [{"name": "Style", "vals": ["Black frame"]}]}];const SHIP=s=>s>=120?0:9.95;
+
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const money=(n,c)=>(c==='AUD'?'AU$':'US$')+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const curOf=c=>c.cur||((P.find(x=>x.id===c.id)||{}).cur)||'USD';
+function tots(){const usd=cart.filter(c=>curOf(c)!=='AUD').reduce((a,c)=>a+c.price*c.q,0),aud=cart.filter(c=>curOf(c)==='AUD').reduce((a,c)=>a+c.price*c.q,0),hasU=cart.some(c=>curOf(c)!=='AUD'),ship=hasU?SHIP(usd):0;return{usd,aud,hasU,hasA:aud>0,ship,txt:[hasU?money(usd+ship):'',aud>0?money(aud,'AUD'):''].filter(Boolean).join(' + ')||money(0)}}
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),1800)}
+let cart=[];try{cart=JSON.parse(localStorage.getItem(KEY+'-cart')||'[]')}catch(e){cart=[]}
+function save(){localStorage.setItem(KEY+'-cart',JSON.stringify(cart));$('#cn').textContent=cart.reduce((a,c)=>a+c.q,0)}
+function optsFor(p){return (p.opts||[]).map((o,i)=>`<label>${o.name}</label><select data-o="${i}">${o.vals.map(v=>`<option>${v}</option>`).join('')}</select>`).join('')}
+let filter='All';
+function render(){
+  const cats=['All',...new Set(P.map(p=>p.cat))];
+  $('#cats').innerHTML=cats.map(c=>`<button class="btn sm ${c===filter?'':'alt'}" data-c="${c}">${c}</button>`).join('');
+  $$('#cats button').forEach(b=>b.onclick=()=>{filter=b.dataset.c;render()});
+  $('#grid').innerHTML=P.filter(p=>filter==='All'||p.cat===filter).map(p=>`<div class="card" data-id="${p.id}"><img src="assets/${p.img}.jpg" alt="${p.name}" loading="lazy"><div class="b"><span class="pill">${p.cat}</span><h3>${p.name}</h3><p>${p.desc}</p>${p.mto?'<span class="pill" style="background:#ffe3ee;color:#b0135f;font-weight:700">Made to order · allow 1 to 3 weeks</span>':''}${optsFor(p)}<div class="row" style="justify-content:space-between;margin-top:6px"><span class="price">${money(p.price,p.cur)}</span><button class="btn sm add">Add to cart</button></div></div></div>`).join('');
+  $$('#grid .add').forEach(b=>b.onclick=()=>{const c=b.closest('.card'),p=P.find(x=>x.id===c.dataset.id);const o=[...c.querySelectorAll('select')].map(s=>s.value).join(', ');const ex=(o.match(/\+A\$(\d+)/g)||[]).reduce((a,m)=>a+ +m.slice(3),0);const k=p.id+'|'+o;const f=cart.find(x=>x.k===k);if(f)f.q++;else cart.push({k,id:p.id,name:p.name,o,price:p.price+ex,cur:p.cur||'USD',q:1});save();toast('Added '+p.name)});
+}
+function openCart(){
+  const T=tots(),ship=T.ship;
+  $('#cartlist').innerHTML=cart.length?cart.map((c,i)=>`<div class="line"><span>${c.name}${c.o?' <small style="color:#8a6a78">('+c.o+')</small>':''}</span><span class="row"><button class="btn sm alt" data-m="${i}">-</button>${c.q}<button class="btn sm alt" data-p="${i}">+</button> ${money(c.price*c.q,curOf(c))}</span></div>`).join('')+(T.hasU?`<div class="line"><span>Shipping (US$ items)</span><span>${money(ship)}</span></div>`:'')+(T.hasA?`<div class="line"><span>Delivery (AI Glasses, Australia)</span><span>Included</span></div>`:'')+`<div class="line"><b>Total</b><b>${T.txt}</b></div>`+(T.hasA?'<p class="note">AI Glasses are made to order: they are ordered in for you after your PayID payment arrives. Allow 1 to 3 weeks for delivery.</p>':''):'<p>Your cart is empty.</p>';
+  $$('[data-m]').forEach(b=>b.onclick=()=>{const c=cart[b.dataset.m];c.q--;if(c.q<1)cart.splice(b.dataset.m,1);save();openCart()});
+  $$('[data-p]').forEach(b=>b.onclick=()=>{cart[b.dataset.p].q++;save();openCart()});
+  $('#tocheck').disabled=!cart.length;$('#cartm').classList.add('on');
+}
+function checkout(){
+  const f=['cname','cemail','caddr'].map(i=>$('#'+i).value.trim());
+  if(!f[0]||!/.+@.+\..+/.test(f[1])||!f[2]){toast('Please fill in your name, email and address');return}
+  const T=tots(),ship=T.ship;
+  const ref='CB-'+KEY.slice(0,3).toUpperCase()+'-'+Date.now().toString(36).toUpperCase().slice(-6);
+  const lines=cart.map(c=>`${c.q} x ${c.name}${c.o?' ('+c.o+')':''}${(P.find(x=>x.id===c.id)||{}).mto?' [MADE TO ORDER, allow 1-3 weeks]':''} - ${money(c.price*c.q,curOf(c))}`).join('\n');
+  const body=`Order ${ref}\n\n${lines}\n${T.hasU?'Shipping: '+money(ship)+'\n':''}${T.hasA?'Delivery (AI Glasses, Australia): included. Made to order, allow 1-3 weeks.\n':''}Total: ${T.txt}\n\nName: ${f[0]}\nEmail: ${f[1]}\nAddress: ${f[2]}\n\nPaid by PayID (Teachers Mutual Bank) to ${PAYID}, reference ${ref}`;
+  $('#done').innerHTML=`<h2>Order ready</h2><p>Order reference <b>${ref}</b></p><div class="payid">Pay by PayID (Teachers Mutual Bank)<br><b class="id">${PAYID}</b><br>Amount <b>${T.txt}</b><br>Use reference <b>${ref}</b> so your payment can be matched.</div><pre style="white-space:pre-wrap;background:#fff7fa;border-radius:12px;padding:10px;font-size:.8rem">${body.replace(/</g,'&lt;')}</pre><div class="row"><a class="btn" href="mailto:${PAYID}?subject=${encodeURIComponent('Coffeebreak order '+ref)}&body=${encodeURIComponent(body)}">Email my order</a><button class="btn alt" id="copyo">Copy order</button><button class="btn alt" id="closed">Close</button></div><p class="note">Your order is sent once your PayID payment arrives. No card details are taken in this app.</p>`;
+  $('#copyo').onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(body).then(()=>toast('Copied'),()=>toast('Copy not available'))};
+  $('#closed').onclick=()=>{$('#doneM').classList.remove('on')};
+  const hist=JSON.parse(localStorage.getItem(KEY+'-orders')||'[]');hist.push({ref,tot:T.txt,date:new Date().toISOString()});localStorage.setItem(KEY+'-orders',JSON.stringify(hist));
+  cart=[];save();$('#checkm').classList.remove('on');$('#doneM').classList.add('on');
+}
+const PAYID='darkokaz@gmx.com';
+document.addEventListener('DOMContentLoaded',()=>{render();save();
+window.LENS_CFG={frames:[{"id": "fr-pink", "name": "Leather-Wrapped Frames, Blush pink", "color": "#f7a8c4", "shape": "rect", "price": 2000, "pid": "fr", "col": "Blush pink"}, {"id": "fr-tan", "name": "Leather-Wrapped Frames, Tan", "color": "#c58a52", "shape": "rect", "price": 2000, "pid": "fr", "col": "Tan"}, {"id": "fr-black", "name": "Leather-Wrapped Frames, Black", "color": "#2a1f25", "shape": "rect", "price": 2000, "pid": "fr", "col": "Black"}, {"id": "fw-choc", "name": "Wayfarer-Style Frames, Chocolate", "color": "#6b3f2a", "shape": "rect", "price": 2000, "pid": "fw", "col": "Chocolate"}],onAdd:function(f,l){const p=P.find(x=>x.id===f.pid);const o=f.col+", Medium, "+l.opt;const k=p.id+"|"+o;const e=cart.find(x=>x.k===k);if(e)e.q++;else cart.push({k,id:p.id,name:p.name,o,price:p.price,q:1});save();toast("Added "+p.name+", "+l.name);}};
+/* Coffeebreak lens slot studio. Config: window.LENS_CFG = {frames:[{id,name,color,shape}], onAdd(frame,lens)} */
+(function(){
+const LENSES=[
+ {id:'clear',name:'Clear',opt:'Clear lens (Free lens included)',sw:'#eaf7ff',fill:'#dff3ff',op:.35,info:'Clear lenses with a scratch-resistant coat. Their bevelled edge clicks into the lens slot in the frame.'},
+ {id:'sun',name:'Sunglass tint',opt:'Sunglass lens (Free lens included)',sw:'#5a3446',fill:'#4a2a3a',op:.82,info:'Sunglass tint, UV400, made to meet AS/NZS 1067 for sunglasses. Slides into the same slot.'},
+ {id:'blue',name:'Blue-light',opt:'Blue-light lens (Free lens included)',sw:'#a9d8ff',fill:'#9fd2ff',op:.45,info:'Blue-light filtering lenses for screen time, with a faint blue sheen. Not a medical product.'},
+ {id:'rx',name:'Prescription',opt:'Prescription ready (Free clear lens included, prescription lenses by your optometrist)',sw:'#ffffff',fill:'#f4fbff',op:.4,info:'Prescription lenses are made by your optometrist, not by Coffeebreak. Take your frames to them. They cut your lenses to the slot shape and fit them in. Frames come with clear demo lenses.'}
+];
+const C=window.LENS_CFG;const root=document.getElementById('lensStudio');if(!C||!root)return;
+let frame=C.frames[0],lens=LENSES[0],busy=false;
+const geo=f=>f.shape==='round'?{l:{x:68,y:68,w:112,h:112,r:56},r:{x:240,y:68,w:112,h:112,r:56}}:{l:{x:52,y:74,w:136,h:104,r:34},r:{x:232,y:74,w:136,h:104,r:34}};
+function lensRect(g,id){return `<rect id="${id}" x="${g.x}" y="${g.y}" width="${g.w}" height="${g.h}" rx="${g.r}" fill="url(#lsTint)" stroke="#ffffff" stroke-opacity=".6" stroke-width="1.5"/>`}
+function rim(g,c){return `<rect x="${g.x}" y="${g.y}" width="${g.w}" height="${g.h}" rx="${g.r}" fill="none" stroke="${c}" stroke-width="22"/>
+<rect x="${g.x}" y="${g.y}" width="${g.w}" height="${g.h}" rx="${g.r}" fill="none" stroke="#4a0f30" stroke-width="4.5" stroke-opacity=".75"/>
+<rect x="${g.x}" y="${g.y}" width="${g.w}" height="${g.h}" rx="${g.r}" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-opacity=".55" transform="translate(0 -2.4)"/>
+<rect x="${g.x-8}" y="${g.y-8}" width="${g.w+16}" height="${g.h+16}" rx="${g.r+8}" fill="none" stroke="#fff" stroke-width="1.4" stroke-dasharray="4 4" stroke-opacity=".8"/>`}
+function draw(){
+ const g=geo(frame),c=frame.color;
+ root.querySelector('.ls-stage').innerHTML=`<svg viewBox="0 0 420 250" role="img" aria-label="${frame.name} with ${lens.name} lenses in the lens slot">
+<defs><linearGradient id="lsTint" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="${Math.min(1,lens.op+.25)}"/><stop offset=".35" stop-color="${lens.fill}" stop-opacity="${lens.op}"/><stop offset="1" stop-color="${lens.fill}" stop-opacity="${Math.min(1,lens.op+.12)}"/></linearGradient></defs>
+<text x="210" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#d81b78" font-family="system-ui,sans-serif">${frame.name}</text>${frame.price?'<text x="210" y="37" text-anchor="middle" font-size="11" font-weight="700" fill="#b0135f" font-family="system-ui,sans-serif">US$'+frame.price.toLocaleString('en-US')+', free lens included</text>':''}
+<g id="lsL">${lensRect(g.l,'lsLr')}<path d="M${g.l.x+24} ${g.l.y+30} l26 -12" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".55"/></g>
+<g id="lsR">${lensRect(g.r,'lsRr')}<path d="M${g.r.x+24} ${g.r.y+30} l26 -12" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".55"/></g>
+${rim(g.l,c)}${rim(g.r,c)}
+<path d="M${g.l.x+g.l.w+10} 112 Q210 92 ${g.r.x-10} 112" stroke="${c}" stroke-width="12" fill="none" stroke-linecap="round"/>
+<path d="M${g.l.x-10} 104 L14 96 M${g.r.x+g.r.w+10} 104 L406 96" stroke="${c}" stroke-width="11" stroke-linecap="round"/>
+${lens.id==='rx'?`<text x="${g.l.x+g.l.w/2}" y="${g.l.y+g.l.h/2+5}" text-anchor="middle" font-size="12" font-weight="700" fill="#4a7aa8" opacity=".8" font-family="system-ui,sans-serif">Rx</text><text x="${g.r.x+g.r.w/2}" y="${g.r.y+g.r.h/2+5}" text-anchor="middle" font-size="12" font-weight="700" fill="#4a7aa8" opacity=".8" font-family="system-ui,sans-serif">Rx</text>`:''}
+<g font-family="system-ui,sans-serif" font-size="12.5" font-weight="700" fill="#4a0f30">
+<path d="M${g.r.x+g.r.w-6} ${g.r.y+g.r.h+2} L${g.r.x+g.r.w+14} 222" stroke="#d81b78" stroke-width="2" fill="none"/><circle cx="${g.r.x+g.r.w-6}" cy="${g.r.y+g.r.h+2}" r="4" fill="#d81b78"/>
+<text x="${g.r.x+g.r.w+14}" y="236" text-anchor="end">Lens slot (groove) inside the rim</text>
+<path d="M${g.l.x+10} ${g.l.y+g.l.h/2} L28 222" stroke="#d81b78" stroke-width="2" fill="none"/><circle cx="${g.l.x+10}" cy="${g.l.y+g.l.h/2}" r="4" fill="#d81b78"/>
+<text x="20" y="236">${lens.name} lens</text></g></svg>`;
+ root.querySelector('.ls-xsec').innerHTML=`<svg viewBox="0 0 220 150" role="img" aria-label="Cut-away of the lens slot">
+<text x="110" y="18" text-anchor="middle" font-size="12" font-weight="700" fill="#d81b78" font-family="system-ui,sans-serif">Inside the slot (cut-away)</text>
+<path d="M130 34 h58 a14 14 0 0 1 14 14 v62 a14 14 0 0 1 -14 14 h-58 v-33 l20 -12 l-20 -12 z" fill="${c}" stroke="#4a0f30" stroke-width="2"/>
+<path d="M130 67 l20 12 l-20 12" fill="#4a0f30" opacity=".3"/>
+<path d="M134 44 h52" stroke="#fff" stroke-width="1.4" stroke-dasharray="4 3" opacity=".8"/>
+<g id="lsX"><path d="M10 72 h120 l17 7 l-17 7 h-120 z" fill="${lens.fill}" fill-opacity="${Math.max(.35,lens.op)}" stroke="#4a7aa8" stroke-width="1.5"/></g>
+<text x="212" y="142" text-anchor="end" font-size="10.5" fill="#4a0f30" font-family="system-ui,sans-serif">leather rim with groove</text>
+<text x="56" y="104" text-anchor="middle" font-size="10.5" fill="#4a0f30" font-family="system-ui,sans-serif">bevelled lens edge</text></svg>`;
+}
+function slide(){
+ if(busy)return;busy=true;const st=root.querySelector('.ls-status');st.textContent='Sliding the '+lens.name.toLowerCase()+' lenses into the slot...';
+ const o={duration:1500,easing:'cubic-bezier(.3,.6,.3,1.1)',fill:'both'};
+ const a=document.getElementById('lsL').animate([{transform:'translate(-230px,0)',opacity:.2},{transform:'translate(0,0)',opacity:1}],o);
+ document.getElementById('lsR').animate([{transform:'translate(230px,0)',opacity:.2},{transform:'translate(0,0)',opacity:1}],o);
+ document.getElementById('lsX').animate([{transform:'translate(-70px,0)'},{transform:'translate(0,0)'}],o);
+ const tk=(window.__lsTk=(window.__lsTk||0)+1);a.onfinish=()=>{if(tk!==window.__lsTk)return;busy=false;st.textContent='✓ '+lens.name+' lenses clicked into the slot';};
+}
+function pick(){draw();root.querySelector('.ls-info').innerHTML='<b>Free lens included, US$0.</b> '+lens.info;
+ root.querySelectorAll('.ls-lens').forEach(b=>b.classList.toggle('on',b.dataset.l===lens.id));
+ root.querySelectorAll('.ls-col').forEach(b=>b.classList.toggle('on',b.dataset.f===frame.id));busy=false;slide();}
+root.innerHTML=`<h2>Lens slot studio</h2><p class="ls-sub">Every Coffeebreak frame has a lens slot, a groove inside the rim. Pick a lens and watch it slide into the slot. Free lens included with your glasses.</p>
+<div class="ls-wrap"><div class="ls-stage"></div><div class="ls-side"><div class="ls-xsec"></div><div class="ls-status" role="status"></div></div></div>
+<div class="ls-lbl">Lens</div><div class="ls-row">${LENSES.map(l=>`<button type="button" class="ls-lens" data-l="${l.id}"><i style="background:${l.sw}"></i>${l.name} <small>Free</small></button>`).join('')}</div>
+<div class="ls-lbl">Frame</div><div class="ls-row">${C.frames.map(f=>`<button type="button" class="ls-col" data-f="${f.id}" title="${f.name}" aria-label="${f.name}" style="background:${f.color}"></button>`).join('')}</div>
+<div class="ls-info"></div>
+<div class="ls-row"><button type="button" class="ls-btn alt" id="lsReplay">Slide it in again</button><button type="button" class="ls-btn" id="lsAdd">Add these frames with this lens</button></div>`;
+root.querySelectorAll('.ls-lens').forEach(b=>b.onclick=()=>{lens=LENSES.find(l=>l.id===b.dataset.l);pick();});
+root.querySelectorAll('.ls-col').forEach(b=>b.onclick=()=>{frame=C.frames.find(f=>f.id===b.dataset.f);pick();});
+root.querySelector('#lsReplay').onclick=slide;
+root.querySelector('#lsAdd').onclick=()=>C.onAdd(frame,lens);
+window.LENS_STUDIO={set:(f,l)=>{if(f)frame=C.frames.find(x=>x.id===f)||frame;if(l)lens=LENSES.find(x=>x.id===l)||lens;pick();},LENSES};
+pick();
+})();
+
+
+  $('#cartb').onclick=openCart;$('#tocheck').onclick=()=>{$('#cartm').classList.remove('on');$('#chsum').textContent=tots().txt;$('#checkm').classList.add('on')};
+  $('#pay').onclick=checkout;$$('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m||e.target.matches('.x'))m.classList.remove('on')}));
+});
+</script></body></html>
